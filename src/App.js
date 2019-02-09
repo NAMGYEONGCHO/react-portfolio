@@ -1,26 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom'
+
+// Navbar and dropbox
+import Navbar from './components/Navbar'
+import DropBox from './components/DropBox';
+
+// Sections/routes
+import UsersList from './UsersList';
+import TodoList from './TodoList'
+import Buttons from './Buttons'
+
 
 class App extends Component {
+  componentDidMount() {//fired one time when component was mounted
+    console.log('component mounted');
+  }
+
+  userAdded(user) {
+    console.log('User added!', user);
+  }
+
   render() {
+    const options1 = [{
+      name: 'Home',
+      link: '/home'
+    }, {
+      name: 'About',
+      link: '/about'
+    }];
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <header>
+            <Navbar />
+          </header>
+
+          {/* Main content */}
+          <main>
+            <Route exact
+              path='/'
+              render={(props) => <UsersList {...props} userAdded={this.userAdded} />} />
+            <Route path="/todo" component={TodoList} />
+            <Route path="/buttons" component={Buttons} />
+          </main>
+        </div>
+      </BrowserRouter>
     );
   }
 }

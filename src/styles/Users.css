@@ -1,0 +1,81 @@
+body{
+    background: pink;
+    transition: all 1s;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 560px) {
+  .user-list {
+    flex-direction: column;
+  }
+
+  .user-list li {
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .user-list .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10;
+  }
+}
+
+.user-list .user {
+  margin-right: 20px;
+}
+.user-list li {
+  font-size: 16px;
+}
+
+.users-list-container form {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.users-list-container button {
+    padding: 10px 12px;
+    border-radius: 5px;
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: .2s opacity;
+  }
+
+  .users-list-container form button {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .users-list-container button:hover {
+    opacity: .8;
+  }
+
+.user button {
+  padding: 10px 12px;
+  border-radius: 5px;
+}
+
+.users-list-container label {
+  color: black;
+}
+
+.users-list-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 960px;
+}
