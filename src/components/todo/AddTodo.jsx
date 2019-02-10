@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class AddTodo extends Component {
     state = {
@@ -9,7 +9,7 @@ class AddTodo extends Component {
     }
     handleChange = (e) => {
         this.setState({
-            content : e.target.value
+            content: e.target.value
         });
     }
     handleSubmit = (e) => {
@@ -21,7 +21,7 @@ class AddTodo extends Component {
             content: ''
         });
     }
-    render(){
+    render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

@@ -21,8 +21,6 @@ class AddUser extends Component {
         } = this.state;
 
         /* Creates a new object with user's data */
-        // Previously we were trying to
-        // update UsersList state with AddUser state, which created a bug
         this.props.addUser({
             name,
             email,

@@ -7,15 +7,15 @@ class Buttons extends Component {
 
     render() {
         const options1 = [{
-            name: 'Home',
-            link: '/home'
+            name: 'users',
+            link: '/users'
         }, {
-            name: 'About',
-            link: '/about'
+            name: 'todos',
+            link: '/todos'
         }];
         const options2 = [{
-            name: 'Contact',
-            link: '/contact'
+            name: 'buttons',
+            link: '/buttons'
         }];
 
         return (

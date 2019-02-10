@@ -36,7 +36,6 @@ class UsersList extends Component {
         });
     }
     componentDidMount() {
-        //029 
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then((res) => {
                 console.log(res);

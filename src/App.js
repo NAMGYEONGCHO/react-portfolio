@@ -13,10 +13,6 @@ import Buttons from './Buttons'
 import Posts from './components/home/Posts'
 
 class App extends Component {
-  componentDidMount() {
-    // fired one time when component was mounted
-    /* console.log('component mounted'); */
-  }
 
   userAdded(user) {
     console.log('User added!', user);
@@ -35,12 +31,12 @@ class App extends Component {
           <main>
             <Route exact path="/" component={Home} />
             {/* <Route exact path="/users" component={UsersList} /> */}
-            <Route exact
+            <Route
               path='/users'
               render={(props) => <UsersList {...props} userAdded={this.userAdded} />} />
             <Route path="/todo" component={TodoList} />
             <Route path="/buttons" component={Buttons} />
-            <Route exact path="/:post_id([0-9]+)" component={Posts} />
+            <Route path="/:post_id([0-9]+)" component={Posts} />
           </main>
         </div>
       </BrowserRouter>

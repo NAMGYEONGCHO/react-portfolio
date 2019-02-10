@@ -11,10 +11,6 @@ class TodoList extends Component {
 
     getTodos = () => {
         return new Promise((resolve, reject) => {
-
-            /*fetch('http(s)://5c5eef023668970014fd1bce.mockapi.io/api/:endpoint')
-                .then(resolve);*/
-
             resolve([
                 { id: 1, content: 'wash' },
                 { id: 2, content: 'eating' }

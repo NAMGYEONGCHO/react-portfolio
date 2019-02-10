@@ -2,7 +2,7 @@ import React from 'react';
 
 const Users = ({ users, deleteUser }) => {    
     const userList = users.map(user => {
-        return /* user.email > 20 ?  */(
+        return (
             <div className="user" key={user.id}>
                 <ul>
                     <li><strong>Name:</strong> {user.name}</li>
@@ -13,7 +13,7 @@ const Users = ({ users, deleteUser }) => {
                     Delete
                 </button>
             </div>
-        ) /* : null; */
+        ) 
     });
 
     return (

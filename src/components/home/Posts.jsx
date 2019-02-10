@@ -1,26 +1,26 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {deletePost} from '../../actions/postAction'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { deletePost } from '../../actions/postAction'
 
-class Posts extends Component{
-    handleClick = () =>{
+class Posts extends Component {
+    handleClick = () => {
         this.props.deletePost(this.props.post.id);
         this.props.history.push('/');
     }
-    render(){
+    render() {
         const post = this.props.post ? (
             <div className="post">
                 <h4 className="center">{this.props.post.title}</h4>
                 <p>{this.props.post.body}</p>
                 <div className="cetner">
                     <button className="btn grey" onClick={this.handleClick}>
-                       Delete Post 
+                        Delete Post
                     </button>
                 </div>
             </div>
-        ):(
-            <div className="center">Loading post...</div>
-        )
+        ) : (
+                <div className="center">Loading post...</div>
+            )
         return (
             <div className="card-content">
                 {post}
@@ -37,7 +37,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        deletePost: (id) => {dispatch(deletePost(id))}
+        deletePost: (id) => { dispatch(deletePost(id)) }
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Posts)
