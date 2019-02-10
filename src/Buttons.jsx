@@ -22,7 +22,7 @@ class Buttons extends Component {
             <div>
                 <DropBox name="First one" options={options1} />
                 <DropBox name="Other one" additionalClasses="right" options={options2} />
-                
+
                 {/* Footer */}
                 <footer>
                     <DropBox name="Footer Dropbox" options={options1} />

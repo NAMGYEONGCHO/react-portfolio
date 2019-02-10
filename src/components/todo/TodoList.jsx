@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 // To-do list
-import Todos from './components/Todos';
-import AddTodo from './components/AddTodo';
+import Todos from './Todos';
+import AddTodo from './AddTodo';
 
 class TodoList extends Component {
     state = {

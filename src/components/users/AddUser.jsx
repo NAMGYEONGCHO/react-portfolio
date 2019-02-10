@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 class AddUser extends Component {
     state = {
         name: null,
-        age: null,
-        gender: null
+        email: null,
+        phone: null
     }
     handleChange = (e) => {
         this.setState({
@@ -16,8 +16,8 @@ class AddUser extends Component {
 
         const {
             name,
-            age,
-            gender
+            email,
+            phone
         } = this.state;
 
         /* Creates a new object with user's data */
@@ -25,8 +25,8 @@ class AddUser extends Component {
         // update UsersList state with AddUser state, which created a bug
         this.props.addUser({
             name,
-            age,
-            gender
+            email,
+            phone
         });
     }
     render() {
@@ -36,11 +36,11 @@ class AddUser extends Component {
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" onChange={this.handleChange}></input>
 
-                    <label htmlFor="age">Age:</label>
-                    <input type="text" id="age" onChange={this.handleChange}></input>
+                    <label htmlFor="email">Email:</label>
+                    <input type="text" id="email" onChange={this.handleChange}></input>
 
-                    <label htmlFor="gender">Gender:</label>
-                    <input type="text" id="gender" onChange={this.handleChange}></input>
+                    <label htmlFor="phone">Tel:</label>
+                    <input type="text" id="phone" onChange={this.handleChange}></input>
 
                     <button>Submit</button>
                 </form>

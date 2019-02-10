@@ -2,18 +2,18 @@ import React from 'react';
 
 const Users = ({ users, deleteUser }) => {    
     const userList = users.map(user => {
-        return user.age > 20 ? (
+        return /* user.email > 20 ?  */(
             <div className="user" key={user.id}>
                 <ul>
                     <li><strong>Name:</strong> {user.name}</li>
-                    <li><strong>Age:</strong> {user.age}</li>
-                    <li><strong>Gender:</strong> {user.gender}</li>
+                    <li><strong>Email:</strong> {user.email}</li>
+                    <li><strong>Tel:</strong> {user.phone}</li>
                 </ul>
                 <button onClick={() => deleteUser(user.id)}>
                     Delete
                 </button>
             </div>
-        ) : null;
+        ) /* : null; */
     });
 
     return (

@@ -13,7 +13,25 @@ code {
     monospace;
 }
 
+.home .post img{
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  opacity: 0.6;
+}
+.home .post{
+  overflow: hidden;
+  padding-left: 80px;
+} 
 
+.post p{
+  padding-left: 10%;
+  padding-right: 10%;
+} 
+.post button{
+  margin-left: 50%;
+  transform: translate(-50%);
+} 
 footer {
   width: 100%;
   position: absolute;
