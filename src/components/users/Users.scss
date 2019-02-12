@@ -1,40 +1,25 @@
+$light-blue: #3498DB;
+
 body{
-    background: whitesmoke;
-    transition: all 1s;
+  background: whitesmoke;
+  transition: all 1s;
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .user-list {
   display: flex;
   flex-wrap: wrap;
 }
-
-@media screen and (max-width: 560px) {
-  .user-list {
-    flex-direction: column;
+.user-list {
+  .user {
+    margin-right: 20px;
   }
-
   .user-list li {
-    margin-right: 10px;
-    display: inline-block;
+    font-size: 16px;
   }
-
-  .user-list .user {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10;
-  }
-}
-
-.user-list .user {
-  margin-right: 20px;
-}
-.user-list li {
-  font-size: 16px;
 }
 
 .users-list-container form {
@@ -47,7 +32,7 @@ nav {
 .users-list-container button {
     padding: 10px 12px;
     border-radius: 5px;
-    background-color: #3498DB;
+    background-color: $light-blue;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -78,4 +63,22 @@ nav {
   margin: 0 auto;
   width: 90%;
   max-width: 960px;
+}
+
+@media screen and (max-width: 560px) {
+  .user-list {
+    flex-direction: column;
+
+    li {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10;
+    }
+  }
 }

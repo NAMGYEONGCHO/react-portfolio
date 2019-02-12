@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Users from './Users';
 import AddUser from './AddUser';
-import './Users.css'
+import './Users.scss'
 
 class UsersList extends Component {
 

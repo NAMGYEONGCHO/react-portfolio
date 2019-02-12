@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import Slider from '../slider/Slider'
 
 class Home extends Component {
     
@@ -24,9 +25,12 @@ class Home extends Component {
                 <div className="center">no post yet</div>
             )
         return (
-            <div className="container">
-                <h4 className="center">Home</h4>
-                {postsList}
+            <div>
+                <Slider />
+                <div className="container">
+                    <h4 className="center">Home</h4>
+                    {postsList}
+                </div>
             </div>
         )
     }

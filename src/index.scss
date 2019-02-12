@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.home {
+  .post{
+    overflow: hidden;
+    padding-left: 80px;
+    img{
+      position: absolute;
+      top: 20px;
+      left: -100px;
+      opacity: 0.6;
+    }
+  } 
+}
+.post p{
+  padding-left: 10%;
+  padding-right: 10%;
+} 
+.post button{
+  margin-left: 50%;
+  transform: translate(-50%);
+} 
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.slick-prev,
+.slick-next {
+  $size: 25px;
+  z-index: 1;
+  transition: .3s all;
+  opacity: 0;
+  width: $size;
+  height: $size;
+
+  &::before {
+    font-size: $size;
+  }
+}
+
+.slick-slide {
+  transition: .5s all !important;
+
+  &.slide-hide {
+    transform: scale(0);
+  }
+}
+
+.slick-slider:hover {
+  .slick-prev,
+  .slick-next {
+    opacity: 1;
+  }
+
+  .slick-prev {
+    left: 25px;
+  }
+  
+  .slick-next {
+    right: 25px;
+  }
+
+  .slick-dots {
+    opacity: 1;
+  }
+}
+
+.slick-dots {
+  bottom: 25px;
+  opacity: 0;
+  transition: .3 opacity;
+  li button::before,
+  li.slick-active button::before {
+    color: white;
+    font-size: 12px;
+  }
+}
