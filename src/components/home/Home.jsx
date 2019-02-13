@@ -26,7 +26,10 @@ class Home extends Component {
             )
         return (
             <div>
-                <Slider />
+                <div className="position-relative">
+                    <Slider />
+                    <button className="center -primary" >중앙정렬중앙</button>
+                </div>
                 <div className="container">
                     <h4 className="center">Home</h4>
                     {postsList}
